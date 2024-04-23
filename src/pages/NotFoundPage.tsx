@@ -1,5 +1,3 @@
-import React from 'react';
-
 const NotFoundPage = () => {
   return (
     <h1 className="text-6xl font-bold w-full h-screen flex-center">
