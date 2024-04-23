@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import { useDashboard } from '../context/DashboardContextProvider';
 
+interface DataItem {
+  [key: string]: unknown;
+}
+
 const useGetData = (path: string, filterKey?: string) => {
 
 
@@ -20,7 +24,7 @@ const useGetData = (path: string, filterKey?: string) => {
         let data = response.data
 
         if (selectedUserId && filterKey) {
-          data = data.filter((item) => Number(item[filterKey]) === Number(selectedUserId))
+          data = data.filter((item: DataItem) => Number(item[filterKey]) === Number(selectedUserId))
         }
 
         setData(data);
