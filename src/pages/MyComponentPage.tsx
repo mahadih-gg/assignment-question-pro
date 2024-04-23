@@ -16,7 +16,6 @@ const MyComponentPage = () => {
       if (index !== 0) {
         button.classList.add('btn-disabled');
       }
-      button.addEventListener('click', handleClick);
     });
 
     return () => {
